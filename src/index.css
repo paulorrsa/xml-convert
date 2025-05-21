@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 12%;
+    --foreground: 0 0% 88%;
+    
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 88%;
+ 
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 88%;
+ 
+    --primary: 0 0% 88%;
+    --primary-foreground: 0 0% 12%;
+ 
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 88%;
+ 
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+ 
+    --accent: 0 0% 25%;
+    --accent-foreground: 0 0% 88%;
+ 
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 0% 88%;
+ 
+    --radius: 1rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Estilos personalizados para a aplicação */
+.dropzone {
+  @apply border-2 border-dashed border-border rounded-2xl p-8 text-center cursor-pointer transition-all hover:border-primary/50;
+}
+
+.dropzone-active {
+  @apply border-primary/70 bg-accent/30;
+}
+
+.card-container {
+  @apply rounded-2xl bg-card p-6 shadow-md;
+}
+
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-xl transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-xl transition-colors;
+}
+
+.btn-outline {
+  @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-xl transition-colors;
+}
+
+.file-item {
+  @apply flex items-center justify-between p-3 mb-2 rounded-xl bg-secondary;
+}
+
+.adsense-container {
+  @apply my-4 p-4 bg-muted rounded-xl text-center text-muted-foreground;
+}
